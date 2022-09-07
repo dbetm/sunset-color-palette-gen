@@ -13,7 +13,7 @@
 
 **Install dependencies**
 
-`pip install -r experiments/requirements.txt`
+`pip install -r exp/requirements.txt`
 
 -------------------
 
@@ -25,7 +25,11 @@
 
 **Add/update dependencies on requirements.txt and install them**
 
-`pip install -r experiments/requirements.txt`
+`pip install -r exp/requirements.txt`
+
+
+**Run tests**
+`make testing`
 
 
 **Deactivate virtual env**
