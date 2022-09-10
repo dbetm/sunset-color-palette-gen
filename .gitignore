@@ -1,0 +1,21 @@
+# python
+/venv
+/.venv
+/__pycache__
+__pycache__/
+*.pyc
+*.pyo
+
+# testing
+/coverage
+experiments/.pytest_cache
+
+
+# Distribution / packaging
+.Python
+wheels/
+
+
+# Misc
+.DS_Store
+.vscode
