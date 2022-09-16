@@ -19,3 +19,7 @@ wheels/
 # Misc
 .DS_Store
 .vscode
+
+# Artifacts
+exp/src/notebooks/*.png
+exp/src/notebooks/*.csv
