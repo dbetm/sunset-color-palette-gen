@@ -9,14 +9,14 @@ html, body {
     width: 90%;
     height: 400px;
     margin: 15px auto;
-    text-align: center;
-    /* border: 3px solid #b32a12; */
 }
 
 .color-item {
     /* border: 1px solid #1eab81; */
     cursor: pointer;
     border-radius: 1px;
+    text-align: left;
+    position: relative;
 }
 
 #firstColor {
@@ -41,6 +41,18 @@ html, body {
     background-color: #3d1c09;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.color-item span {
+    position: absolute;
+    bottom: 0;
+    /* border: 1px solid #40b312; */
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: white;
+    padding: 2px;
+    background-color: rgba(46, 46, 46, 0.3);
 }
 
 .btn {
