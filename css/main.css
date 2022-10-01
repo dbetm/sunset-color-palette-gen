@@ -6,7 +6,7 @@ html, body {
 
 
 #colorPalette {
-    width: 90%;
+    width: 92%;
     height: 400px;
     margin: 15px auto;
 }
@@ -14,7 +14,7 @@ html, body {
 .color-item {
     /* border: 1px solid #1eab81; */
     cursor: pointer;
-    border-radius: 1px;
+    /* border-radius: 1px; */
     text-align: left;
     position: relative;
 }

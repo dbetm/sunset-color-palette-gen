@@ -16,7 +16,7 @@ function copy(spanObj) {
     result = document.execCommand("copy");
 	document.body.removeChild(input);
 
-    // Display for 1.5 seconds a label indicating that was copied.
+    // Display for 1.2 seconds a label indicating that was copied.
     spanObj.innerHTML = "copied +)";
 
     setTimeout(function() {
