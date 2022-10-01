@@ -14,6 +14,7 @@ function rgbStringToArray(rgbStr) {
     });
 }
 
+
 function rgbToHex(red, green, blue) {
     return (
         "#"
@@ -21,4 +22,15 @@ function rgbToHex(red, green, blue) {
         + componentToHex(green)
         + componentToHex(blue)
     );
+}
+
+
+function formatRBGColor(red, green, blue) {
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
+
+function getRandomChannelColorValue() {
+    const max = 256;
+    return Math.floor(Math.random() * max);
 }
