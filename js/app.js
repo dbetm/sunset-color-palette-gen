@@ -1,7 +1,25 @@
+var sunsetInfo;
+var currentIndex = -1;
+
 // Entrypoint
 window.onload = function() {
     renderCodeColors();
+
+    fetch("assets/sunset_info.json")
+        .then(response => response.json())
+        .then(json => renderSunsetInfo(json));
 };
+
+
+function renderSunsetInfo(data=null) {
+    sunsetInfo = data == null ? sunsetInfo : data;
+    currentIndex = (currentIndex + 1) % sunsetInfo.length;
+
+    let infoItem = sunsetInfo[currentIndex];
+
+    document.getElementById("infoTitle").innerHTML = infoItem.title;
+    document.getElementById("infoContent").innerHTML = infoItem.content;
+}
 
 
 function copy(spanObj) {
@@ -17,12 +35,13 @@ function copy(spanObj) {
 	document.body.removeChild(input);
 
     // Display for 1.2 seconds a label indicating that was copied.
-    spanObj.innerHTML = "copied +)";
+    spanObj.innerHTML = "copied!";
 
     setTimeout(function() {
         spanObj.innerHTML = value;
     }, 1200);
 }
+
 
 function renderCodeColors() {
     let colorPalette = document.getElementById("colorPalette");
@@ -35,6 +54,7 @@ function renderCodeColors() {
         insertColorCode(spanChild, colorCode);
     }
 }
+
 
 function insertColorCode(spanObj, colorCode) {
     let rgbArr = rgbStringToArray(colorCode);
