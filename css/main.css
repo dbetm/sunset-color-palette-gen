@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
     width: 100%;
-    /* display: table; */
 }
 
 
@@ -12,9 +11,7 @@ html, body {
 }
 
 .color-item {
-    /* border: 1px solid #1eab81; */
     cursor: pointer;
-    /* border-radius: 1px; */
     text-align: left;
     position: relative;
 }
@@ -46,10 +43,9 @@ html, body {
 .color-item span {
     position: absolute;
     bottom: 0;
-    /* border: 1px solid #40b312; */
     margin-left: 5px;
     margin-bottom: 5px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: white;
     padding: 2px;
     background-color: rgba(46, 46, 46, 0.3);
