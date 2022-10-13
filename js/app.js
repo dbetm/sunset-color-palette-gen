@@ -1,5 +1,5 @@
 var sunsetInfo;
-var currentIndex = -1;
+var currentInfoIndex = -1;
 
 // Entrypoint
 window.onload = function() {
@@ -13,9 +13,9 @@ window.onload = function() {
 
 function renderSunsetInfo(data=null) {
     sunsetInfo = data == null ? sunsetInfo : data;
-    currentIndex = (currentIndex + 1) % sunsetInfo.length;
+    currentInfoIndex = (currentInfoIndex + 1) % sunsetInfo.length;
 
-    let infoItem = sunsetInfo[currentIndex];
+    let infoItem = sunsetInfo[currentInfoIndex];
 
     document.getElementById("infoTitle").innerHTML = infoItem.title;
     document.getElementById("infoContent").innerHTML = infoItem.content;
