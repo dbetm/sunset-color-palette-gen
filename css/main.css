@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+#colorPalette {
+    width: 92%;
+    height: 400px;
+    margin: 15px auto;
+}
+
+.color-item {
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+}
+
+#firstColor {
+    height: 150px;
+    background-color: #e96d26;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#secondColor {
+    height: 100px;
+    background-color: #c65b1e;
+}
+
+#thirdColor {
+    height: 75px;
+    background-color: #71330f;
+}
+
+#fourthColor {
+    height: 75px;
+    background-color: #3d1c09;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.color-item span {
+    position: absolute;
+    bottom: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: white;
+    padding: 2px;
+    background-color: rgba(46, 46, 46, 0.3);
+}
+
+.btn {
+    border: 1px solid #1f1f1f;
+}
+
+.card-text {
+    text-align: justify !important;
+}
