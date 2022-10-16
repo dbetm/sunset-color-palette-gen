@@ -8,15 +8,15 @@
       "content":"Durante un amanecer o atardecer los rayos azules son dispersados y absorbidos ya que la luz del Sol tiene que atravesar más parte de la atmósfera. Quedando solo los rayos de color rojo/naranja (del espectro visible) que tienen una longitud de onda más larga respecto a los otros."
     },
     {
-      "title":"Candilazo",
-      "content":"Así se le llama al fenómeno meteorológico en el que las nubes en el cielo muestran una extensa paleta de colores que va del rosa al naranja más intenso."
-    },
-    {
       "title":"Duración del ocaso",
-      "content":"Tomando en cuenta solo el tamaño angular del Sol, ~0.5°, toma alrededor de 2 minutos para desaparecer completamente el mismo. Al considerar los efectos lumínosos por la atmósfera y nubes, entonces dura alrededor de 26 minutos en la Ciudad de México, esto varía dependiendo de la distancia al ecuador."
+      "content":"Tomando en cuenta solo el tamaño angular del Sol, ~0.5°, toma alrededor de 2 minutos para desaparecer completamente el mismo. Al considerar los efectos lumínosos por la atmósfera y nubes, dura alrededor de 26 minutos en la Ciudad de México, varía en cada lugar dependiendo de la distancia al ecuador."
     },
     {
       "title":"¿Por qué nos gustan verlos?",
       "content":"Los colores cálidos, los suaves degradados y el contraste son agradables de apreciar. Es el momento diferente y verlos nos hace sentir que no nos hemos perdido de la parte especial del día. Las nubes ayudan con los degradados, y por las formas y texturas que agregan interés."
+    },
+    {
+        "title":"Candilazo",
+        "content":"Así se le llama al fenómeno meteorológico en el que las nubes en el cielo muestran una extensa paleta de colores que va del rosa al naranja más intenso."
     }
 ]
