@@ -58,3 +58,13 @@ html, body {
 .card-text {
     text-align: justify !important;
 }
+
+@media screen and (min-width: 1200px) {
+    #infoTitle {
+        font-size: 2em;
+    }
+
+    #infoContent {
+        font-size: 1.3em;
+    }
+}
