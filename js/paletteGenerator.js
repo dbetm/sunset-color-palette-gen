@@ -24,16 +24,23 @@ function genPalette() {
 
 /*
 * TODO: - Implement real algorithm, please replace this code
+* At this moment it was implemented a random strategy from a real sample color.
 */
 function genColorsMagicAlgorithm() {
     let newColors = [NUMBER_COLORS];
+    let numAvailableColors = colorData.length;
 
     for(let i = 0; i < NUMBER_COLORS; ++i) {
+        let colorIdx = Math.floor(Math.random() * (numAvailableColors - 1));
+        newColors[i] = colorData[colorIdx];
+        console.log(colorIdx);
+        /*
         newColors[i] = [
             getRandomChannelColorValue(),
             getRandomChannelColorValue(),
             getRandomChannelColorValue()
         ];
+        */
     }
 
     return newColors;
