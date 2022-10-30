@@ -1,5 +1,6 @@
 var sunsetInfo;
 var currentInfoIndex = -1;
+var colorData;
 
 // Entrypoint
 window.onload = function() {
@@ -8,6 +9,8 @@ window.onload = function() {
     fetch("assets/sunset_info.json")
         .then(response => response.json())
         .then(json => renderSunsetInfo(json));
+
+    loadColorData();
 };
 
 
@@ -60,4 +63,16 @@ function insertColorCode(spanObj, colorCode) {
     let rgbArr = rgbStringToArray(colorCode);
     let hexValue = rgbToHex(rgbArr[0], rgbArr[1], rgbArr[2]);
     spanObj.innerHTML = hexValue;
+}
+
+
+function loadColorData() {
+    Papa.parse("assets/sample_colors.csv", {
+    	download: true,
+    	complete: function(results) {
+    		// console.log(results);
+            colorData = results.data;
+            console.log(colorData);
+    	}
+    });
 }
