@@ -10,7 +10,7 @@ Example v1 app.
     - Script to search Tweets with sunset picts.
     - Script to download sunsets pictures.
     - Unsupervised K-Means algorithm to sample representative color for each image of the dataset-
-    - Unsupervised K-Means algorithm to generate final dataset with more common of the colors.
+    - Unsupervised K-Means algorithm to generate final dataset with the most common colors.
 2) Simple web as the final implementation.
     - Interactive sunset palette generator.
     - Display information about sunsets.
@@ -19,6 +19,6 @@ Example v1 app.
 -----
 
 ### Contribute
-Feel free to open an issue and maybe Pull Request to suggest improvements :)
+Feel free to open an issue and maybe a Pull Request to suggest improvements :)
 
 
