@@ -67,12 +67,10 @@ function insertColorCode(spanObj, colorCode) {
 
 
 function loadColorData() {
-    Papa.parse("assets/sample_colors.csv", {
+    Papa.parse("assets/processed_color_data.csv", {
     	download: true,
     	complete: function(results) {
-    		// console.log(results);
             colorData = results.data;
-            console.log(colorData);
     	}
     });
 }
