@@ -11,7 +11,7 @@ from sklearn.cluster import KMeans
 from tqdm import tqdm
 
 
-# given an array of colors, where the ith position its a triple with 
+# given an array of colors, where the ith position its a triple with
 # the r, g, b format of the ith color, show them in a row in a graphic way
 
 def show_colors(colors):
@@ -46,10 +46,10 @@ def show_colors_2d(colors):
     #set the axis to be invisible
     #ax.set_axis_off()
     #add the colors to the axis
-    ax.imshow(colors)    
+    ax.imshow(colors)
 
     #show the figure, showing the x values so that it fits the figure
-    
+
     plt.show()
 
 
@@ -71,14 +71,14 @@ class KMeans:
     def __init__(self, n_clusters, min_diff = 1):
         self.n_clusters = n_clusters
         self.min_diff = min_diff
-    
-    def calculate_center(self, points):    
-        n_dim = len(points[0].coordinates)    
-        vals = [0.0 for i in range(n_dim)]    
+
+    def calculate_center(self, points):
+        n_dim = len(points[0].coordinates)
+        vals = [0.0 for i in range(n_dim)]
         for p in points:
             for i in range(n_dim):
                 vals[i] += p.coordinates[i]
-        coords = [(v / len(points)) for v in vals]    
+        coords = [(v / len(points)) for v in vals]
         return Point(coords)
 
     def assign_points(self, clusters, points):
@@ -94,14 +94,14 @@ class KMeans:
                     idx = i
 
             plists[idx].append(p)
-        
+
         return plists
 
     def fit(self, points):
         clusters = [
             Cluster(center=p, points=[p]) for p in random.sample(points, self.n_clusters)
         ]
-        
+
         while True:
             plists = self.assign_points(clusters, points)
             diff = 0
@@ -132,7 +132,7 @@ def rgb_to_hex(rgb):
     return '#%s' % ''.join(('%02x' % p for p in rgb))
 
 
-def get_points_pro(row):  
+def get_points_pro(row):
     points = []
 
     for color in row:
@@ -184,7 +184,7 @@ def show_colors_2d(colors, title):
     #set the axis to be invisible
     #ax.set_axis_off()
     #add the colors to the axis
-    ax.imshow(colors)    
+    ax.imshow(colors)
     #add the title
     plt.title(title)
     #show the figure, showing the x values so that it fits the figure
@@ -217,7 +217,7 @@ def gen_color_group_hash(color_group: list) -> str:
 
     for color in color_group:
         color_hash += "".join(map(str, color))
-    
+
     return color_hash
 
 
@@ -231,7 +231,7 @@ def gen_sample_colors(all_colors: list, sample_frac: float = 0.8) -> list:
     for _ in range(s_size):
         idx = random.randint(0, n-1)
         sample.append(all_colors[idx])
-    
+
 
     return sample
 
@@ -250,7 +250,7 @@ def gen_columns(num_colors_per_row: int) -> List[str]:
 
 
 # main function
-if __name__ == '__main__':   
+if __name__ == '__main__':
     # given a two dimensional array
     # where every column is an array with the ith position its a triple with the r, g, b format of a color
     # group the array using kmeans
@@ -278,7 +278,7 @@ if __name__ == '__main__':
             if(len(row) == 4):
                 pass
                 # print(row[0], row[1], row[2], row[3])
-                
+
             elif(len(row) == 7):
                 # print(row[0], row[1], row[2], row[3], row[4], row[5], row[6])
 
@@ -288,7 +288,7 @@ if __name__ == '__main__':
                 for i in range(1, len(row)):
                     columns.append((int(row[i][0:row[i].find(';')]) , int(row[i][row[i].find(';')+1:row[i].rfind(';')]), int(row[i][row[i].rfind(';')+1:])))
                     all_colors.append((int(row[i][0:row[i].find(';')]) , int(row[i][row[i].find(';')+1:row[i].rfind(';')]), int(row[i][row[i].rfind(';')+1:])))
-                
+
                 #print(columns)          #[(73, 55, 84), (234, 227, 221), (4, 3, 4), (147, 86, 101), (213, 146, 140), (33, 34, 59)]
                 #print(columns[0])       #(73, 55, 84)
                 colors.append(columns)
@@ -297,7 +297,7 @@ if __name__ == '__main__':
                 show colors row by row in a graphic way
                 show_colors(colors[cont], "Colores raw " + "fila " + str(cont) )   #Muestra los colores de la n-esima fila
                 """
-                
+
                 """
                 #group the colors using kmeans
                 kcolors = get_colors_pro(n_colors=K, rowx = columns)
@@ -336,7 +336,7 @@ if __name__ == '__main__':
     for _ in tqdm(range(100)):
         sample_colors = gen_sample_colors(all_colors)
         row = get_k_colors_from_all_dataset(k=K, data=sample_colors)
-        row.sort()
+        row.sort(reverse=True)
         color_group_hash = gen_color_group_hash(row)
 
         if color_group_hash not in color_hashes:
