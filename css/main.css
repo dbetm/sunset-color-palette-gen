@@ -59,6 +59,11 @@ html, body {
     text-align: justify !important;
 }
 
+#switchMode {
+    margin: 0 auto;
+    font-size: 1.3em;
+}
+
 @media screen and (min-width: 1200px) {
     #infoTitle {
         font-size: 2em;

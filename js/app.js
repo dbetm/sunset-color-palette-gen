@@ -38,7 +38,7 @@ function copy(spanObj) {
 	document.body.removeChild(input);
 
     // Display for 1.2 seconds a label indicating that was copied.
-    spanObj.innerHTML = "copied!";
+    spanObj.innerHTML = "copiado";
 
     setTimeout(function() {
         spanObj.innerHTML = value;
@@ -66,11 +66,22 @@ function insertColorCode(spanObj, colorCode) {
 }
 
 
-function loadColorData() {
-    Papa.parse("assets/processed_color_data.csv", {
+function loadColorData(datasetFilename="processed_color_data.csv") {
+    datasetPath = "assets/" + datasetFilename;
+
+    Papa.parse(datasetPath, {
     	download: true,
     	complete: function(results) {
             colorData = results.data;
     	}
     });
+}
+
+function switchMode(element) {
+    if(element.checked) {
+        loadColorData("creative_mode_dataset.csv");
+    }
+    else {
+        loadColorData();
+    }
 }
