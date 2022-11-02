@@ -10,6 +10,8 @@ import pandas as pd
 from sklearn.cluster import KMeans
 from tqdm import tqdm
 
+from utils import gen_columns
+
 
 # given an array of colors, where the ith position its a triple with
 # the r, g, b format of the ith color, show them in a row in a graphic way
@@ -235,18 +237,6 @@ def gen_sample_colors(all_colors: list, sample_frac: float = 0.8) -> list:
 
     return sample
 
-
-def gen_columns(num_colors_per_row: int) -> List[str]:
-    channels_map = ("red", "blue", "green")
-    number_channels = 3
-
-    columns = list()
-
-    for i in range(num_colors_per_row * number_channels):
-        c_name = f"{channels_map[i % number_channels]}{i // 3}"
-        columns.append(c_name)
-
-    return columns
 
 
 # main function
